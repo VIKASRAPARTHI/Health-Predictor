@@ -1,0 +1,26 @@
+lifestyle-disease-prediction/
+│── backend/                 # Express.js backend (Node.js & MongoDB)
+│   ├── models/              # Database models (Mongoose schema)
+│   │   ├── UserData.js      # User health data schema
+│   ├── routes/              # API routes for data handling
+│   │   ├── predict.js       # Prediction route
+│   ├── server.js            # Main server file
+│   ├── config.js            # Database connection setup
+│── frontend/                # React.js frontend (Tailwind UI)
+│   ├── src/
+│   │   ├── components/      # UI components
+│   │   │   ├── Form.js      # Input form component
+│   │   │   ├── Result.js    # Prediction result display
+│   │   ├── pages/           # Pages (Home, Results)
+│   │   │   ├── Home.js      # Home page
+│   │   │   ├── Results.js   # Results page
+│   │   ├── App.js           # Main App component
+│   │   ├── index.js         # React entry point
+│   │   ├── api.js           # API calls to backend
+│── ml-model/                # Machine Learning model (Flask & Scikit-learn)
+│   ├── train_model.py       # Training script (RandomForestClassifier)
+│   ├── model.pkl            # Saved ML model
+│   ├── app.py               # Flask API to serve model predictions
+│── dataset/                 # Health dataset for training
+│── .env                     # Environment variables
+│── README.md 
