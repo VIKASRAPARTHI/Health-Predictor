@@ -13,7 +13,7 @@ const Navbar = () => {
         <img src={logo} alt="WELLPRO Logo" className="nav-logo" />
         
       </div>
-      <div className="nav-right">
+      <div className="nav-right" style={{ overflow: 'hidden' }}>
         <Link to="/about" className="nav-link">ABOUT US</Link>
       </div>
     </nav>

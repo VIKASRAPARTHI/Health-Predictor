@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-const UserData = require("../models/UserData");
+const UserData = require("../models/UserHealth");
 
 const router = express.Router();
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import FormPage from './pages/FormPage';
 import OutputPage from './pages/OutputPage';
+import HealthForm from './pages/HealthForm';
 
 function App() {
   return (
@@ -11,8 +11,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/form" element={<FormPage />} />
+        <Route path="/health-form" element={<HealthForm />} />
         <Route path="/output" element={<OutputPage />} />
+        {/* <Route path="/" element={<HealthForm setHealthResults={setHealthResults} />} />
+        <Route path="/output" element={<OutputPage healthResults={healthResults} />} /> */}
+      
       </Routes>
     </Router>
   );

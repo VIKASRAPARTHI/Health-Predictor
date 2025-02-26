@@ -1,0 +1,44 @@
+.health-form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.health-form-container h2 {
+  text-align: center;
+  color: #008040;
+}
+
+.health-form label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.health-form input,
+.health-form select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.health-form button {
+  width: 100%;
+  background-color: #008040;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.health-form button:hover {
+  background-color: #006633;
+}
