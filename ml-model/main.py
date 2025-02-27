@@ -16,7 +16,7 @@ app.add_middleware(
 )
 
 # Replace this with your actual API key
-API_KEY = "https://nexus-heg8.onrender.com"
+API_KEY = "https://localhost:8000/predict"
 
 # Define request model
 class HealthData(BaseModel):
@@ -37,17 +37,19 @@ class HealthData(BaseModel):
 # API Endpoint
 @app.post("/predict")
 async def predict(health_data: HealthData, x_api_key: str = Header(None)):
+    print("Received data from frontend:", health_data.dict()) 
     if x_api_key != API_KEY:
         raise HTTPException(status_code=403, detail="Invalid API Key")
 
     # Replace with the actual API you want to call
-    external_api_url = "https://your-external-health-api.com/predict"
+    external_api_url = "https://nexus-heg8.onrender.com/predict"
     
     response = requests.post(
         external_api_url,
         json=health_data.dict(),
-        headers={"Authorization": f"Bearer {API_KEY}"}
     )
+    
+    print("Response from External API:", response.json())
 
     if response.status_code != 200:
         raise HTTPException(status_code=response.status_code, detail="External API error")
