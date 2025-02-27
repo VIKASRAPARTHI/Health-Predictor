@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Chatbot from "./components/Chatbot";
+import Community from "./components/community";
 import Navbar from "./components/Navbar";
+import HealthForm from "./pages/HealthForm";
 import Home from "./pages/Home";
 import OutputPage from "./pages/OutputPage";
-import HealthForm from "./pages/HealthForm";
 
 function App() {
   const [healthResults, setHealthResults] = useState(null);
@@ -16,13 +18,15 @@ function App() {
         <Route
           path="/health-form"
           element={<HealthForm setHealthResults={setHealthResults} />}
+          
         />
         <Route
           path="/output"
           element={<OutputPage healthResults={healthResults} />}
+          
         />
-        {/* <Route path="/" element={<HealthForm setHealthResults={setHealthResults} />} />
-        <Route path="/output" element={<OutputPage healthResults={healthResults} />} /> */}
+        <Route path="/ai-chatbot" element={<Chatbot />} />
+        <Route path="/community" element={<Community />} />
       </Routes>
     </>
   );

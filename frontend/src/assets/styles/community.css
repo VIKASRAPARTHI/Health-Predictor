@@ -1,0 +1,168 @@
+.community-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+  
+.community-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+  
+.tab {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+  
+.tab.active {
+  background: #007bff;
+  color: white;
+}
+  
+.category-filter {
+  margin-bottom: 20px;
+}
+  
+.category-filter select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+  
+.health-tips-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+  
+.health-tip {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 300px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+  
+.post-box {
+  margin-bottom: 20px;
+}
+  
+.post-box textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  min-height: 100px;
+  resize: vertical;
+}
+  
+.post-box button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+  
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+  
+.post {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+  
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+  
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+  
+.post-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+  
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+  
+.expert-advice-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+  
+.expert-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+  
+.expert-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+  
+.specialty {
+  color: #666;
+  font-size: 0.9em;
+}
+  
+.advice-content {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+  
+.consult-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+  
+@media (max-width: 600px) {
+  .health-tips-carousel {
+    flex-direction: column;
+  }
+  
+  .health-tip {
+    min-width: unset;
+  }
+}
+  

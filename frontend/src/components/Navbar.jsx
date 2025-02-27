@@ -7,14 +7,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <Link to="/how-it-works" className="nav-link">HOW IT WORKS ?</Link>
+        <Link to="/community" className="nav-link">Community</Link>
       </div>
       <div className="nav-center">
         <img src={logo} alt="WELLPRO Logo" className="nav-logo" />
         
       </div>
       <div className="nav-right" style={{ overflow: 'hidden' }}>
-        <Link to="/about" className="nav-link">ABOUT US</Link>
+        <Link to="/ai-chatbot" className="nav-link">AI ChatBot</Link>
       </div>
     </nav>
   );

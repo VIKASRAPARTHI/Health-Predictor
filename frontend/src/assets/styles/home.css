@@ -1,76 +1,204 @@
-body, html {
-  overflow-x: hidden; /* Removes horizontal scrolling */
-  overflow-y: auto; /* Keeps vertical scrolling */
+/* General Styles */
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
+
+body {
+  background: linear-gradient(to bottom, #fce4ec, #bbdefb);
+}
+
+/* Home Section */
 .home {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   text-align: center;
+  padding: 20px;
   position: relative;
-  overflow: hidden;
-  
-}
-
-.home-content {
-  font-size: 2rem; /* Increased heading size */
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  z-index: 2; /* Ensures text stays on top */
-  max-width: 700px;
-  color: #319b31; /* Change text color for better contrast */
-}
-
-.home-content1{
-  font-size: 2rem; /* Increased heading size */
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  z-index: 2; /* Ensures text stays on top */
-  max-width: 700px;
-  color: #085008;
-
 }
 
 .home-logo {
+  width: 43%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  animation: blink 2s ease-in-out infinite;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%; /* Adjust size as needed */
-  height: auto;
-  opacity: 0.2; /* Makes the logo faint so text is readable */
-  z-index: 1; /* Ensures logo stays behind text */
+  z-index: 1;
 }
 
-.home-logo-title {
-  width: 150px; /* Adjust size as needed */
-  height: auto;
+@keyframes blink {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.2; }
+  100% { opacity: 0.5; }
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+}
+
+.home-content1 {
+  position: relative;
+  z-index: 2;
+}
+
+.home-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d81b60;
+}
+
+.home-content1 p {
+  font-size: 1.5rem;
+  color: #121212;
   margin-top: 10px;
 }
 
-.home-subtitle {
-  font-size: 14px;
-  color: #005a3e;
-}
-
 .home-btn {
-  background-color: #008040;
-  color: white;
-  padding: 10px 20px;
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #d81b60;
   border: none;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 50px;
   border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .home-btn:hover {
-  background-color: #006633;
+  background-color: #b6184e;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  background: #fff;
+  padding: 50px 20px;
+}
+
+.features h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d81b60;
+  margin-bottom: 20px;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 320px;
+}
+
+.feature img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: linear-gradient(to bottom, #ffebee, #e3f2fd);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d81b60;
+  margin-bottom: 30px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.testimonial h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.testimonial span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .feature-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .testimonial-container {
+    flex-direction: row;
+  }
 }
