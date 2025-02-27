@@ -1,29 +1,88 @@
 .output-container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
   text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
 }
 
-.results p {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0;
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #007bff;
+.result-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+}
+
+.result-card p {
+  margin: 0;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.high-risk {
+  background-color: #ffebee;
+  border: 1px solid #ef5350;
+}
+
+.low-risk {
+  background-color: #e8f5e9;
+  border: 1px solid #66bb6a;
+}
+
+.risk-warning {
+  display: block;
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.no-results {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.back-button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.8rem 2rem;
+  background-color: #2196f3;
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.back-button:hover {
+  background-color: #1976d2;
+}
+
+@media (max-width: 768px) {
+  .output-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+  }
 }
